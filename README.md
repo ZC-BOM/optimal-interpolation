@@ -18,7 +18,7 @@ Third line - Total variance - Total error variance of background and insitu valu
 
 a) Through Jupyter Notebooks
 
-  i) Copying all the individual files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to      be in the last cell. In the env.sh cell, remove references to exporting and define paths as Python variables instead. 
+  i) Copying all the individual files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to      be in the last cell. In the env.sh, config.conf and si.conf cells, remove references to exporting and define paths as Python variables instead. 
   
   ii) Ensure all paths in env.sh exist.
   
