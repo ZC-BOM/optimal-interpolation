@@ -16,17 +16,7 @@ Third line - Total variance - Total error variance of background and insitu valu
 
 3. Run either by:
 
-a) Through Jupyter Notebooks
-
-  i) Copying all the individual files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to      be in the last cell. In the env.sh, config.conf and si.conf cells, remove references to exporting and define paths as Python variables instead. 
-  
-  ii) Ensure all paths in env.sh exist.
-  
-  iii) As you are not going to parse in a date through a command line, remove the parser in si_satellite_grid.py. Replace 'args.date_string' with 'date_string' and set        this to a string of format 'YYYYMMDD'.
-  
-  iv) Run env.sh cell, then all the other cells and finally the si_satellite_grid.py cell.
-
-b) Through Unix:
+a) Through Unix:
 
   i) In run_si.bash, set the paths to env.sh and config.conf. Ensure all paths in env.sh exist.
   
@@ -35,4 +25,18 @@ b) Through Unix:
   ii) Ensure run_si.bash is executable.
   
   iii) Use the command 'run_si.bash -d YYYYDDMM si_satellite_grid'.
+  
+ b) Through Jupyter Notebooks
+
+  i) Copying env.sh, core_functions.py and si_satellite.py files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to be in the last cell. In the env.sh, remove references to exporting and define paths as Python variables instead. 
+  
+  ii) Ensure all paths in env.sh exist.
+  
+  iii) As you are not going to parse in a date through a command line, remove the parser in si_satellite_grid.py. Replace 'args.date_string' with 'date_string' and set        this to a string of format 'YYYYMMDD'.
+  
+  iv) Remove use of 'environ' in core_functions.py cell (in data_dl and file_checker).
+  
+  v) In si_satellite_grid.py cell, remove reference to importing core_functions.py . Remove use of 'environ', and instead point to defined path variables. Define 'EXTENT' variable as 'aus', 'ACCUM_MONTH' as 1, 'MAP_TYPE' as 'gsmap' and 'TIME_TYPE' as 'MON. Define all other 'environ' variables as per their definition in config.conf. Remove lines that read in si.conf ans instead define 'rz_array', 'L_array' and 'total_variance_array' as per their definition in si.conf.
+  
+  iv) Run env.sh cell, then all the other cells and finally the si_satellite_grid.py cell.
 
