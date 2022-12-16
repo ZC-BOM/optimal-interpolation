@@ -18,13 +18,13 @@ Third line - Total variance - Total error variance of background and insitu valu
 
 a) Through Jupyter Notebooks
 
-  i) Copying all the individual files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to be in the last cell. In the env.sh cell, remove references to exporting and define paths as Python variables instead. 
+  i) Copying all the individual files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to      be in the last cell. In the env.sh cell, remove references to exporting and define paths as Python variables instead. 
   
   ii) Ensure all paths in env.sh exist.
   
   iii) As you are not going to parse in a date through a command line, remove the parser in si_satellite_grid.py. Replace 'args.date_string' with 'date_string' and set        this to a string of format 'YYYYMMDD'.
   
-  iv) Run the si_satellite_grid.py cell.
+  iv) Run env.sh cell, then all the other cells and finally the si_satellite_grid.py cell.
 
 b) Through Unix:
 
