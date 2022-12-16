@@ -28,7 +28,7 @@ a) Through Jupyter Notebooks
 
 b) Through Unix:
 
-  i) Ensure all paths in env.sh exist.
+  i) In run_si.bash, set the paths to env.sh and config.conf. Ensure all paths in env.sh exist.
   
   ii) Ensure input station file exist and is in 'grid_dir'. The format used in the study is given. If your station data is in a different format, it might be better to         develop your own code for reading the data file and return the station rainfall values, station latitude values and station longitude values as the arrays               'station_values', 'station_lat' and 'station_lon'. The line 'station_values, _, station_lat, station_lon = rr_total_file_reader(STATION_DIR, date_string, file_type         = '', delimiter = ',')' in si_satellite_grid.py should be replaced in this case.
   
