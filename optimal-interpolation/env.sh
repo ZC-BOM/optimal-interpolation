@@ -8,4 +8,4 @@ export log_level='DEBUG'
 export grid_dir=PATH_TO_DIR
 export station_dir=PATH_TO_DIR
 
-PATH=$script_dir:$BIN_UTIL_DIR:$SCRIPT_UTIL_DIR:$PATH;;
+PATH=$script_dir:$PATH;
