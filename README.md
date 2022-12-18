@@ -16,7 +16,7 @@ Third line - Total variance - Total error variance of background and insitu valu
 
 3. Run either by:
 
-a) Through Unix:
+a) Through Unix (preferred way, less modifications required):
 
   i) In run_si.bash, set the paths to env.sh and config.conf. Ensure all paths in env.sh exist.
   
