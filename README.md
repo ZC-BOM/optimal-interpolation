@@ -16,17 +16,17 @@ Third line - Total variance - Total error variance of background and insitu valu
 
 3. Run either by:
 
-a) Through Unix (preferred way, less modifications required):
+**a) Through Unix (preferred way, less modifications required):**
 
-  i) In run_si.bash, set the paths to env.sh and config.conf. Ensure all paths in env.sh exist.
+  i) In run_si.bash, set the paths to env.sh and config.conf. Ensure all paths in env.sh exist. Ensure all required Python modules are installed.
   
-  ii) Ensure input station file exist and is in 'grid_dir'. The format used in the study is given. If your station data is in a different format, it might be better to         develop your own code for reading the data file and return the station rainfall values, station latitude values and station longitude values as the arrays               'station_values', 'station_lat' and 'station_lon'. The line 'station_values, _, station_lat, station_lon = rr_total_file_reader(STATION_DIR, date_string, file_type         = '', delimiter = ',')' in si_satellite_grid.py should be replaced in this case.
+  ii) Ensure input station file exist and is in 'grid_dir'. The format used in the study is given as an example but since it only has three stations, the variable 'station_number_cutoff' in config.conf has to be changed from '20' to '3' or less. If your station data is in a different format, it might be better to develop your own code for reading the data file and return the station rainfall values, station latitude values and station longitude values as the arrays 'station_values', 'station_lat' and 'station_lon'. The line 'station_values, _, station_lat, station_lon = rr_total_file_reader(STATION_DIR, date_string, file_type         = '', delimiter = ',')' in si_satellite_grid.py should be replaced in this case.
   
   ii) Ensure env.sh and run_si.bash is executable.
   
   iii) Use the command 'run_si.bash -d YYYYDDMM si_satellite_grid'.
   
- b) Through Jupyter Notebooks
+** b) Through Jupyter Notebooks**
 
   i) Copying env.sh, core_functions.py and si_satellite.py files (except run_si.bash) into individual cells in a Python notebook. env.sh has to be in the first cell, si_satellite_grid.py has to be in the last cell. In the env.sh, remove references to exporting and define paths as Python variables instead. 
   
